@@ -20,10 +20,9 @@ public class Main {
             }
             InputControl ic = game.getInputControl();
             int input = io.getInput( ic);
-            game.addARoll(input);
-
-            System.out.println(input);
-            System.out.println();
+            if (!game.addARoll(input))
+                io.output("Input check failed");
+            io.output("");
         }
     }
 }

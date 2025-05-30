@@ -22,9 +22,15 @@ public class BowlingGame {
 
     int roll_index = 0;
 
-    public void addARoll(int roll) {
+    public boolean addARoll(int roll) {
+        int pinsRemaining = frames[currentFrame].pinsRemaining();
+        if (roll >  pinsRemaining || roll < 0)
+            return false;
+        if (roll_index >= rolls.length)
+            return false;
         rolls[roll_index] = roll;
         roll_index++;
+        return true;
     }
 
     public void setRolls(List<Integer> values) {

@@ -1,9 +1,5 @@
 Feature: Bowling 
 
-Define 
-| Name  | Value  | Notes                  |
-| TBR   | -1     | Roll has not occurred  |
-
 Scenario: Adding a roll 
 Given rolls are                                 # ListOfListOfObject Integer 
 |  5 | 5  | 4  | 5  |  8 | 2  | 10  | 0 | 10 | 10 | 6 | 2| 10 | 4 | 6| 10 | 
@@ -12,7 +8,7 @@ When roll is                                    # ListOfListOfObject Integer
 Then rolls become                               # ListOfListOfObject Integer 
 |  5 | 5  | 4  | 5  |  8 | 2  | 10  | 0 | 10 | 10 | 6 | 2| 10 | 4 | 6| 10 | 10 |
 
-Scenario: Full Game Display and Input
+Scenario: Full Game Compute and Display
 #Note:  one more roll remaining to end the game 
 Given rolls are                                  # ListOfListOfObject Integer 
 |  5 | 5  | 4  | 5  |  8 | 2  | 10  | 0 | 10 | 10 | 6 | 2| 10 | 4 | 6| 10 | 10 |
@@ -24,7 +20,9 @@ Then display is
 """
 # The above was done by "approval testing" - output was created, checked, and then inserted here
 
-
+Define 
+| Name  | Value  | Notes                  |
+| TBR   | -1     | Roll has not occurred  |
 
 Scenario: A Game in Steps 
 Given rolls are                                  # ListOfListOfObject Integer
@@ -45,8 +43,10 @@ Then display values are                          # ListOfObject FrameDisplay Tra
 | Mark2       | /   | 5   | /   |     | /   |      | 2    |      | /    | X    |
 | Mark3       |     |     |     |     |     |      |      |      |      |      |
 | TotalScore  | 14  | 23  | 43  | 63  | 83  | 101  | 109  | 129  | 149  |      |
+
 Then game complete is                            # ListOfListOfObject Boolean 
 | false| 
+
 Then input control is                            # ListOfObject InputControlValues 
 | Frame  | Roll  | Remaining  |
 | 10     | 3     | 10         |
@@ -59,6 +59,7 @@ When scored
 Then game complete is                            # ListOfListOfObject Boolean 
 | true | 
 
+
 Scenario: Values for Tenth Frame 
 Given rolls for tenth frame are                   # ListOfListOfObject Integer
 | 10 | 10 | 
@@ -70,7 +71,7 @@ Then Then tenth frame values are                  # ListOfObject FrameValues Tra
 | Roll3       | TBR  |
 | Score       | TBR  |
 | TotalScore  | TBR  |
-# Could check for other tenth frame values 
+# Could check for other tenth frame conditions 
 
 Scenario: Input Control Should Be For Next Frame 
 Given rolls are                                    # ListOfListOfObject Integer 
@@ -79,6 +80,15 @@ When scored
 Then input control is                              # ListOfObject InputControlValues 
 | Frame  | Roll  | Remaining  |
 | 2      | 1     | 10         |
+
+Scenario: Try to add invalid roll 
+Given rolls are                                 # ListOfListOfObject Integer 
+| 5 |
+When scored 
+When roll is                                    # ListOfListOfObject Integer 
+| 6 |
+Then rolls become                               # ListOfListOfObject Integer 
+| 5 |
 
 
 * Data FrameValues

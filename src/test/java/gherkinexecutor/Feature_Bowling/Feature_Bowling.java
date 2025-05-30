@@ -386,5 +386,32 @@ class Feature_Bowling{
             );
         feature_Bowling_glue_object.Then_input_control_is(objectList3);
         }
+    @Test
+    void test_Scenario_Try_to_add_invalid_roll(){
+         Feature_Bowling_glue feature_Bowling_glue_object = new Feature_Bowling_glue();
+
+        List<List<String>> stringListList1 = List.of(
+           List.of(
+            "5"
+            )
+            );
+        feature_Bowling_glue_object.Given_rolls_are(stringListList1);
+
+        feature_Bowling_glue_object.When_scored();
+
+        List<List<String>> stringListList3 = List.of(
+           List.of(
+            "6"
+            )
+            );
+        feature_Bowling_glue_object.When_roll_is(stringListList3);
+
+        List<List<String>> stringListList4 = List.of(
+           List.of(
+            "5"
+            )
+            );
+        feature_Bowling_glue_object.Then_rolls_become(stringListList4);
+        }
     }
 

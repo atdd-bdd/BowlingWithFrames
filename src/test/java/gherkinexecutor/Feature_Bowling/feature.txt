@@ -65,6 +65,14 @@ When scored
 Then input control is                              # ListOfObject InputControlValues
 | Frame  | Roll  | Remaining  |
 | 2      | 1     | 10         |
+Scenario: Try to add invalid roll
+Given rolls are                                 # ListOfListOfObject Integer
+| 5 |
+When scored
+When roll is                                    # ListOfListOfObject Integer
+| 6 |
+Then rolls become                               # ListOfListOfObject Integer
+| 5 |
 * Data FrameValues
 | Name        | Default  | DataType  |
 | Frame       | 1        | Integer   |
