@@ -1,0 +1,216 @@
+package gherkinexecutor.Feature_Bowling;
+import java.util.*;
+import static org.junit.jupiter.api.Assertions.*;
+import java.util.List;
+
+class Feature_Bowling_glue {
+    final String DNCString = "?DNC?";
+
+
+    void Given_rolls_are(List<List<String>> values ) {
+    List<List<Integer>> is = convertList(values);
+    System.out.println(is);
+        fail("Must implement");
+    }
+
+    void When_roll_is(List<List<String>> values ) {
+    List<List<Integer>> is = convertList(values);
+    System.out.println(is);
+        fail("Must implement");
+    }
+
+    void Then_rolls_become(List<List<String>> values ) {
+    List<List<Integer>> is = convertList(values);
+    System.out.println(is);
+        fail("Must implement");
+    }
+
+    void When_scored(){
+        System.out.println("---  " + "When_scored");
+        fail("Must implement");
+    }
+
+    void Then_display_is(String value ) {
+        System.out.println("---  " + "Then_display_is");
+        System.out.println(value);
+        fail("Must implement");
+    }
+
+    void Then_frame_values_are(List<FrameValues> values ) {
+        System.out.println("---  " + "Then_frame_values_are");
+        for (FrameValues value : values){
+             System.out.println(value);
+             // Add calls to production code and asserts
+              FrameValuesInternal i = value.toFrameValuesInternal();
+              }
+        fail("Must implement");
+    }
+
+    void Given_frame_values_are_as_previous(){
+        System.out.println("---  " + "Given_frame_values_are_as_previous");
+        fail("Must implement");
+    }
+
+    void Then_display_values_are(List<FrameDisplay> values ) {
+        System.out.println("---  " + "Then_display_values_are");
+        for (FrameDisplay value : values){
+             System.out.println(value);
+             // Add calls to production code and asserts
+              FrameDisplayInternal i = value.toFrameDisplayInternal();
+              }
+        fail("Must implement");
+    }
+
+    void Then_game_complete_is(List<List<String>> values ) {
+    List<List<Boolean>> is = convertList(values);
+    System.out.println(is);
+        fail("Must implement");
+    }
+
+    void Then_input_control_is(List<InputControlValues> values ) {
+        System.out.println("---  " + "Then_input_control_is");
+        for (InputControlValues value : values){
+             System.out.println(value);
+             // Add calls to production code and asserts
+              InputControlValuesInternal i = value.toInputControlValuesInternal();
+              }
+        fail("Must implement");
+    }
+
+    void Given_rolls_for_tenth_frame_are(List<List<String>> values ) {
+    List<List<Integer>> is = convertList(values);
+    System.out.println(is);
+        fail("Must implement");
+    }
+
+    void Then_Then_tenth_frame_values_are(List<FrameValues> values ) {
+        System.out.println("---  " + "Then_Then_tenth_frame_values_are");
+        for (FrameValues value : values){
+             System.out.println(value);
+             // Add calls to production code and asserts
+              FrameValuesInternal i = value.toFrameValuesInternal();
+              }
+        fail("Must implement");
+    }
+
+              public static List<List<Integer>> convertList(List<List<String>> stringList) {
+                  List<List<Integer>> classList = new ArrayList<>();
+                  for (List<String> innerList : stringList) {
+                      List<Integer> innerClassList = new ArrayList<>();
+                      for (String s : innerList) {
+                          innerClassList.add(Integer.valueOf(s));
+                      }
+                      classList.add(innerClassList);
+                  }
+              return classList;
+              }
+
+              public static List<List<Integer>> convertList(List<List<String>> stringList) {
+                  List<List<Integer>> classList = new ArrayList<>();
+                  for (List<String> innerList : stringList) {
+                      List<Integer> innerClassList = new ArrayList<>();
+                      for (String s : innerList) {
+                          innerClassList.add(Integer.valueOf(s));
+                      }
+                      classList.add(innerClassList);
+                  }
+              return classList;
+              }
+
+              public static List<List<Integer>> convertList(List<List<String>> stringList) {
+                  List<List<Integer>> classList = new ArrayList<>();
+                  for (List<String> innerList : stringList) {
+                      List<Integer> innerClassList = new ArrayList<>();
+                      for (String s : innerList) {
+                          innerClassList.add(Integer.valueOf(s));
+                      }
+                      classList.add(innerClassList);
+                  }
+              return classList;
+              }
+
+              public static List<List<Integer>> convertList(List<List<String>> stringList) {
+                  List<List<Integer>> classList = new ArrayList<>();
+                  for (List<String> innerList : stringList) {
+                      List<Integer> innerClassList = new ArrayList<>();
+                      for (String s : innerList) {
+                          innerClassList.add(Integer.valueOf(s));
+                      }
+                      classList.add(innerClassList);
+                  }
+              return classList;
+              }
+
+              public static List<List<Integer>> convertList(List<List<String>> stringList) {
+                  List<List<Integer>> classList = new ArrayList<>();
+                  for (List<String> innerList : stringList) {
+                      List<Integer> innerClassList = new ArrayList<>();
+                      for (String s : innerList) {
+                          innerClassList.add(Integer.valueOf(s));
+                      }
+                      classList.add(innerClassList);
+                  }
+              return classList;
+              }
+
+              public static List<List<Boolean>> convertList(List<List<String>> stringList) {
+                  List<List<Boolean>> classList = new ArrayList<>();
+                  for (List<String> innerList : stringList) {
+                      List<Boolean> innerClassList = new ArrayList<>();
+                      for (String s : innerList) {
+                          innerClassList.add(Boolean.parseBoolean(s));
+                      }
+                      classList.add(innerClassList);
+                  }
+              return classList;
+              }
+
+              public static List<List<Integer>> convertList(List<List<String>> stringList) {
+                  List<List<Integer>> classList = new ArrayList<>();
+                  for (List<String> innerList : stringList) {
+                      List<Integer> innerClassList = new ArrayList<>();
+                      for (String s : innerList) {
+                          innerClassList.add(Integer.valueOf(s));
+                      }
+                      classList.add(innerClassList);
+                  }
+              return classList;
+              }
+
+              public static List<List<Boolean>> convertList(List<List<String>> stringList) {
+                  List<List<Boolean>> classList = new ArrayList<>();
+                  for (List<String> innerList : stringList) {
+                      List<Boolean> innerClassList = new ArrayList<>();
+                      for (String s : innerList) {
+                          innerClassList.add(Boolean.parseBoolean(s));
+                      }
+                      classList.add(innerClassList);
+                  }
+              return classList;
+              }
+
+              public static List<List<Integer>> convertList(List<List<String>> stringList) {
+                  List<List<Integer>> classList = new ArrayList<>();
+                  for (List<String> innerList : stringList) {
+                      List<Integer> innerClassList = new ArrayList<>();
+                      for (String s : innerList) {
+                          innerClassList.add(Integer.valueOf(s));
+                      }
+                      classList.add(innerClassList);
+                  }
+              return classList;
+              }
+
+              public static List<List<Integer>> convertList(List<List<String>> stringList) {
+                  List<List<Integer>> classList = new ArrayList<>();
+                  for (List<String> innerList : stringList) {
+                      List<Integer> innerClassList = new ArrayList<>();
+                      for (String s : innerList) {
+                          innerClassList.add(Integer.valueOf(s));
+                      }
+                      classList.add(innerClassList);
+                  }
+              return classList;
+              }
+
+    }
