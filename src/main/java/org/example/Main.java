@@ -23,7 +23,7 @@ public class Main {
             game.addARoll(input);
 
             System.out.println(input);
-            System.out.println("");
+            System.out.println();
         }
     }
 }

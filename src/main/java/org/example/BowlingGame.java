@@ -23,7 +23,6 @@ public class BowlingGame {
     int roll_index = 0;
 
     public void addARoll(int roll) {
-        List<Integer> rollList = getRolls();
         rolls[roll_index] = roll;
         roll_index++;
     }
@@ -45,7 +44,7 @@ public class BowlingGame {
 
     public void computeScore() {
         int previousFrameScore = 0;
-    ;   int start = 0;
+        int start = 0;
         for (int frameIndex = 0; frameIndex < frames.length; frameIndex++) {
             Frame frame = frames[frameIndex];
             int incrementRoll =
@@ -79,8 +78,7 @@ public class BowlingGame {
         return ic;
     }
     public boolean isComplete() {
-        boolean result = frames[frames.length - 1].isGameComplete();
-        return result;
+        return frames[frames.length - 1].isGameComplete();
     }
     public boolean isNextFrame(){
         if (previousFrame!=currentFrame)

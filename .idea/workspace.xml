@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7924b5ac-85a4-44aa-ba11-5d12081fcf1d" name="Changes" comment="Initial committ">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/DisplayFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/InputControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TenthFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/todo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7924b5ac-85a4-44aa-ba11-5d12081fcf1d" name="Changes" comment="Game is working for console output.  Input validation has been added.">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BowlingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BowlingGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ConsoleIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ConsoleIO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Frame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TenthFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TenthFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +135,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial committ" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial committ" />
+    <MESSAGE value="Game is working for console output.  Input validation has been added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Game is working for console output.  Input validation has been added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -155,7 +152,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/BowlingGame.java</url>
-          <line>37</line>
+          <line>36</line>
           <properties class="org.example.BowlingGame" method="getRolls">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

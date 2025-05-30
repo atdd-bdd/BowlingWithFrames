@@ -21,22 +21,25 @@ public class TenthFrame extends Frame {
         else
             displayFrame.mark3 = markForRoll(roll3);
 
-        if(totalScore !=BowlingGame.TBR)
-    displayFrame.displayScore =String.format("%3s",String.valueOf(totalScore));
+        if (totalScore != BowlingGame.TBR)
+            displayFrame.displayScore = String.format("%3s", totalScore);
         else
-    displayFrame.displayScore ="   ";
+            displayFrame.displayScore = "   ";
         return displayFrame;
 
-}
+    }
+
     boolean isGameComplete() {
         if (roll2 == BowlingGame.TBR)
             return false;
         if (isStrike() || isSpare())
+            //noinspection RedundantIfStatement
             if (roll3 == BowlingGame.TBR)
                 return false;
         return true;
     }
-    int pinsRemaining(){
+
+    int pinsRemaining() {
         if (roll1 == BowlingGame.TBR)
             return 10;
         if (isStrike()) {
@@ -52,7 +55,8 @@ public class TenthFrame extends Frame {
             return 10;
         return 0;
     }
-    int currentRoll(){
+
+    int currentRoll() {
         if (roll1 == BowlingGame.TBR)
             return 1;
         if (roll2 == BowlingGame.TBR)

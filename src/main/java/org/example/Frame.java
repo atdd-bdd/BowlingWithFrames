@@ -65,7 +65,7 @@ public class Frame {
             }
 
         if (totalScore != BowlingGame.TBR)
-            displayFrame.displayScore = String.format("%3s", String.valueOf(totalScore));
+            displayFrame.displayScore = String.format("%3s", totalScore);
         else
             displayFrame.displayScore = "   ";
         return displayFrame;

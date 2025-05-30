@@ -22,7 +22,7 @@ public class ConsoleIO {
             System.exit(-1);
         }
         console.writer().println(statusLine);
-        String input = "";
+        String input;
         int result = -1;
         boolean valid = false;
         while (!valid) {
@@ -74,14 +74,12 @@ public class ConsoleIO {
 
         StringBuilder output = new StringBuilder();
         output.append("|");
-        for (int index = 0; index < frames.length; index++) {
-            DisplayFrame frame = frames[index];
+        for (DisplayFrame frame : frames) {
             String part = frame.mark1 + frame.mark2 + frame.mark3 + "|";
             output.append(part);
         }
         output.append("\n|");
-        for (int index = 0; index < frames.length; index++) {
-            DisplayFrame frame = frames[index];
+        for (DisplayFrame frame : frames) {
             String part = frame.displayScore + "|";
             output.append(part);
         }
