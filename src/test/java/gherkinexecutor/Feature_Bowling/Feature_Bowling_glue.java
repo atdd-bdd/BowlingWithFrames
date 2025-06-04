@@ -21,7 +21,7 @@ class Feature_Bowling_glue {
 
     void When_roll_is(List<List<String>> values) {
         List<List<Integer>> is = convertListToInteger(values);
-        int roll = is.get(0).get(0);
+        Roll roll = new Roll(is.get(0).get(0));
         game.addARoll(roll);
     }
 
@@ -70,16 +70,17 @@ class Feature_Bowling_glue {
         for (FrameValues value : values) {
             FrameValuesInternal i = value.toFrameValuesInternal();
             Frame frame = game.frames[index];
-            checkAllFields(i, frame);
+            System.out.println(" internal "+ i.roll1 + " " + i.roll2 + " " + i.roll3);
+            System.out.println(" frame "+ frame.roll1 + " " + frame.roll2 + " " + frame.roll3);           checkAllFields(i, frame);
             index++;
         }
 
     }
 
     private static void checkAllFields(FrameValuesInternal i, Frame frame) {
-        assertEquals(i.roll1, frame.roll1, "Roll 1");
-        assertEquals(i.roll2, frame.roll2, " Roll 2");
-        assertEquals(i.roll3, frame.roll3, " Roll 3");
+        assertEquals(new Roll(i.roll1), frame.roll1, "Roll 1");
+        assertEquals(new Roll(i.roll2), frame.roll2, " Roll 2");
+        assertEquals(new Roll(i.roll3), frame.roll3, " Roll 3");
         assertEquals(i.score, frame.frameScore, "Frame Score");
         assertEquals(i.totalScore, frame.totalScore, "Total Score");
     }
@@ -122,6 +123,7 @@ class Feature_Bowling_glue {
         for (FrameValues value : values) {
             if (value.frame.equals("10")) {
                 FrameValuesInternal i = value.toFrameValuesInternal();
+                System.out.println(" internal "+ i.roll1 + " " + i.roll2 + " " + i.roll3);
                 Frame f = game.frames[9];
                 checkAllFields(i, f);
             }

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.original;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class Main {
                 break;
             }
             InputControl ic = game.getInputControl();
-            Roll input = io.getInput( ic);
+            int input = io.getInput( ic);
             if (!game.addARoll(input))
                 io.output("Input check failed");
             io.output("");

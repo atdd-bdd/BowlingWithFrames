@@ -7,16 +7,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7924b5ac-85a4-44aa-ba11-5d12081fcf1d" name="Changes" comment="Added README.md.   &#10;Altered addRole to check that input is valid.">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="7924b5ac-85a4-44aa-ba11-5d12081fcf1d" name="Changes" comment="Added some design decisions">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Roll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/original/BowlingGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/original/ConsoleIO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/original/DisplayFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/original/Frame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/original/InputControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/original/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/original/TenthFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/original/todo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BowlingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BowlingGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ConsoleIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ConsoleIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Frame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/todo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/bowling.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/bowling.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/Feature_Bowling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/Feature_Bowling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/Feature_Bowling_glue.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/Feature_Bowling_glue.tmpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/feature.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/feature.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TenthFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TenthFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/Feature_Bowling_glue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/Feature_Bowling_glue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +58,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/user/ideaprojects/BowlingWithFrames/src/main/java/org/example/original",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.41582337",
@@ -59,6 +67,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\ideaprojects\BowlingWithFrames\src\main\java\org\example\original" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example" />
     </key>
@@ -144,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1748575654438</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added some design decisions">
+      <created>1748620597276</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1748620597276</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -152,7 +170,8 @@
     <MESSAGE value="Game is working for console output.  Input validation has been added." />
     <MESSAGE value="Cleanup of warnings" />
     <MESSAGE value="Added README.md.   &#10;Altered addRole to check that input is valid." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added README.md.   &#10;Altered addRole to check that input is valid." />
+    <MESSAGE value="Added some design decisions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some design decisions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

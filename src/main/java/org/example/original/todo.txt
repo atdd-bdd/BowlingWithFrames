@@ -1,0 +1,12 @@
+
+
+Design Decisions:
+
+Should addRole call somputeScore()?
+
+If so, then check if game is already complete?
+
+Should it do a logging of the errors?
+
+
+

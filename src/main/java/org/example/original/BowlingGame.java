@@ -1,4 +1,4 @@
-package org.example;
+package org.example.original;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,7 +7,7 @@ import java.util.List;
 public class BowlingGame {
     static final int TBR = -1;
     static final int ROLL_COUNT = 21;
-    Roll[] rolls = new Roll[ROLL_COUNT];
+    int[] rolls = new int[ROLL_COUNT];
 
     int previousFrame = 0;
     int currentFrame = 0;
@@ -17,14 +17,14 @@ public class BowlingGame {
             new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame()};
 
     public BowlingGame() {
-        Arrays.fill(rolls, new Roll(TBR));
+        Arrays.fill(rolls, TBR);
     }
 
     int roll_index = 0;
 
-    public boolean addARoll(Roll roll) {
+    public boolean addARoll(int roll) {
         int pinsRemaining = frames[currentFrame].pinsRemaining();
-        if (roll.greaterThan(new Roll(pinsRemaining))|| roll.lessThan(new Roll(0)))
+        if (roll >  pinsRemaining || roll < 0)
             return false;
         if (roll_index >= rolls.length)
             return false;
@@ -35,7 +35,7 @@ public class BowlingGame {
 
     public void setRolls(List<Integer> values) {
         for (int i = 0; i < values.size(); i++) {
-            rolls[i] = new Roll(values.get(i));
+            rolls[i] = values.get(i);
         }
         roll_index = values.size();
     }
@@ -43,8 +43,7 @@ public class BowlingGame {
     public List<Integer> getRolls() {
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < ROLL_COUNT; i++) {
-            if (rolls[i].notEqual(new Roll(TBR)))
-                result.add(rolls[i].toInteger());
+            if (rolls[i] != TBR) result.add(rolls[i]);
         }
         return result;
     }

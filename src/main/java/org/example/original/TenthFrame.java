@@ -1,4 +1,4 @@
-package org.example;
+package org.example.original;
 
 public class TenthFrame extends Frame {
     public DisplayFrame convertToDisplay() {
@@ -11,12 +11,12 @@ public class TenthFrame extends Frame {
         if (isSpare())
             displayFrame.mark2 = "/";
         else {
-            if (roll2.Equal(new Roll(10)))
+            if (roll2 == 10)
                 displayFrame.mark2 = "X";
             else
                 displayFrame.mark2 = markForRoll(roll2);
         }
-        if (roll3.Equal(new Roll(10)))
+        if (roll3 == 10)
             displayFrame.mark3 = "X";
         else
             displayFrame.mark3 = markForRoll(roll3);
@@ -30,36 +30,36 @@ public class TenthFrame extends Frame {
     }
 
     boolean isGameComplete() {
-        if (roll2.isTBR() )
+        if (roll2 == BowlingGame.TBR)
             return false;
         if (isStrike() || isSpare())
             //noinspection RedundantIfStatement
-            if (roll3.isTBR())
+            if (roll3 == BowlingGame.TBR)
                 return false;
         return true;
     }
 
     int pinsRemaining() {
-        if (roll1.Equal(Roll.RollTBR))
+        if (roll1 == BowlingGame.TBR)
             return 10;
         if (isStrike()) {
-            if (roll2.Equal(Roll.RollTBR))
+            if (roll2 == BowlingGame.TBR)
                 return 10;
-            if (roll2.Equal(new Roll(10)))
+            if (roll2 == 10)
                 return 10;
-            return 10 - roll2.toInteger();
+            return 10 - roll2;
         }
-        if (roll2.notEqual(Roll.RollTBR))
-            return 10 - roll1.toInteger();
+        if (roll2 == BowlingGame.TBR)
+            return 10 - roll1;
         if (isSpare())
             return 10;
         return 0;
     }
 
     int currentRoll() {
-        if (roll1.Equal(Roll.RollTBR))
+        if (roll1 == BowlingGame.TBR)
             return 1;
-        if (roll2.Equal(Roll.RollTBR))
+        if (roll2 == BowlingGame.TBR)
             return 2;
         return 3;
     }
