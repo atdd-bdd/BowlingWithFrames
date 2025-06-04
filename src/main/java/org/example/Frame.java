@@ -7,6 +7,8 @@ public class Frame {
     public int frameScore = BowlingGame.TBS;
     public int totalScore = BowlingGame.TBS;
 
+    public static final int PINS_IN_FRAME = 10;
+
     public String toString() {
         return "roll1 " + roll1 + " roll2 " + roll2 + " roll3 " + roll3 + " frameScore "
                 + frameScore + " total score " + totalScore;
@@ -77,8 +79,8 @@ public class Frame {
 
     int pinsRemaining(){
         if (roll1.isTBR())
-            return 10 ;
-        return 10 - roll1.toInteger();
+            return PINS_IN_FRAME ;
+        return PINS_IN_FRAME - roll1.toInteger();
     }
 
     int currentRoll(){
@@ -97,7 +99,7 @@ public class Frame {
 
     boolean isSpare() {
         return roll1.toInteger() +
-                roll2.toInteger() == 10;
+                roll2.toInteger() == PINS_IN_FRAME;
     }
 
     boolean isStrike() {

@@ -10,10 +10,10 @@
     <list default="true" id="7924b5ac-85a4-44aa-ba11-5d12081fcf1d" name="Changes" comment="Cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BowlingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BowlingGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ConsoleIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ConsoleIO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Roll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Roll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TenthFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TenthFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/todo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/Feature_Bowling_glue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/Feature_Bowling_glue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1749044686955</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Cleanup">
+      <created>1749046149955</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1749046149955</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

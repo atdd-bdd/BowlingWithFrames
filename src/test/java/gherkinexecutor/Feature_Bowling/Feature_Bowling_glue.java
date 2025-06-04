@@ -110,12 +110,16 @@ class Feature_Bowling_glue {
     }
 
     void Given_rolls_for_tenth_frame_are(List<List<String>> values) {
-        List<List<Integer>> is = convertListToInteger(values);
-        List<Integer> rolls = List.of(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-        List<Integer> full = new ArrayList<>();
+        List<List<Roll>> is = convertListToRoll(values);
+        List<Roll> rolls = List.of(Roll.Zero, Roll.Zero, Roll.Zero,
+                Roll.Zero, Roll.Zero, Roll.Zero, Roll.Zero,
+                Roll.Zero, Roll.Zero, Roll.Zero, Roll.Zero,
+                Roll.Zero, Roll.Zero, Roll.Zero, Roll.Zero,
+                Roll.Zero, Roll.Zero, Roll.Zero);
+        List<Roll> full = new ArrayList<>();
         full.addAll(rolls);
         full.addAll(is.get(0));
-        game.setRollsWithInteger(full);
+        game.setRolls(full);
     }
 
     void Then_Then_tenth_frame_values_are(List<FrameValues> values) {

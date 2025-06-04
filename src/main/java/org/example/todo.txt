@@ -1,5 +1,9 @@
 
 
+Should Roll do a computation of pins remaining (or at least the subtraction?)
+    Integer pinsRemaining(){}
+
+
 Design Decisions:
 
 Should addRole call somputeScore()?
@@ -7,6 +11,7 @@ Should addRole call somputeScore()?
 If so, then check if game is already complete?
 
 Should it do a logging of the errors?
+
 
 
 

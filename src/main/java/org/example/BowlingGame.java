@@ -33,12 +33,6 @@ public class BowlingGame {
         return true;
     }
 
-    public void setRollsWithInteger(List<Integer> values) {
-        for (int i = 0; i < values.size(); i++) {
-            rolls[i] = new Roll(values.get(i));
-        }
-        roll_index = values.size();
-    }
     public void setRolls(List<Roll> values) {
         for (int i = 0; i < values.size(); i++) {
             rolls[i] = values.get(i);

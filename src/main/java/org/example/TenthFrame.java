@@ -41,18 +41,18 @@ public class TenthFrame extends Frame {
 
     int pinsRemaining() {
         if (roll1.isTBR())
-            return 10;
+            return Frame.PINS_IN_FRAME;
         if (isStrike()) {
             if (roll2.isTBR())
-                return 10;
+                return Frame.PINS_IN_FRAME;
             if (roll2.isStrike())
-                return 10;
-            return 10 - roll2.toInteger();
+                return Frame.PINS_IN_FRAME;
+            return Frame.PINS_IN_FRAME - roll2.toInteger();
         }
         if (roll2.isNotTBR())
             if (isSpare())
-                return 10;
-        return 10-roll1.toInteger();
+                return Frame.PINS_IN_FRAME;
+        return Frame.PINS_IN_FRAME-roll1.toInteger();
     }
 
     int currentRoll() {
