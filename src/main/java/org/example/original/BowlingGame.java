@@ -55,7 +55,7 @@ public class BowlingGame {
             Frame frame = frames[frameIndex];
             int incrementRoll =
                     frame.incrementRollIndexForNextFrame(rolls[start], rolls[start + 1], rolls[start + 2], previousFrameScore);
-            if (incrementRoll != BowlingGame.TBR) {
+            if (incrementRoll != 0) {
                 previousFrameScore = frame.getTotalScore();
                 start += incrementRoll;
                 currentFrame = frameIndex+1;

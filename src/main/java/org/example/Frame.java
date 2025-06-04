@@ -1,11 +1,11 @@
 package org.example;
 
 public class Frame {
-    public Roll roll1 = Roll.RollTBR;
-    public Roll roll2 = Roll.RollTBR;
-    public Roll roll3 = Roll.RollTBR;
-    public int frameScore = BowlingGame.TBR;
-    public int totalScore = BowlingGame.TBR;
+    public Roll roll1 = Roll.TBR;
+    public Roll roll2 = Roll.TBR;
+    public Roll roll3 = Roll.TBR;
+    public int frameScore = BowlingGame.TBS;
+    public int totalScore = BowlingGame.TBS;
 
     public String toString() {
         return "roll1 " + roll1 + " roll2 " + roll2 + " roll3 " + roll3 + " frameScore "
@@ -31,27 +31,26 @@ public class Frame {
     private void scoreFrame() {
         System.out.println("Scoring rolls " + roll1 + " " + roll2 + " " + roll3);
         if (isStrike()) {
-            if (roll3.notEqual(Roll.RollTBR))
+            if (roll3.isNotTBR())
                 frameScore = roll1.toInteger() + roll2.toInteger() + roll3.toInteger();
         } else if (isSpare()) {
-            if (roll3.notEqual(Roll.RollTBR))
+            if (roll3.isNotTBR())
                 frameScore = roll1.toInteger() + roll2.toInteger() + roll3.toInteger();
-        } else if (roll2.notEqual(Roll.RollTBR))
+        } else if (roll2.isNotTBR())
             frameScore =  roll1.add(roll2).toInteger();
-        if (frameScore != BowlingGame.TBR)
+        if (frameScore != BowlingGame.TBS)
             totalScore = previousFrameScore + frameScore;
         System.out.println("in score " + frameScore + " " + totalScore);
     }
 
     private int incrementRollIndexBy() {
-        if (roll1.Equal(Roll.RollTBR))
-            return BowlingGame.TBR;
+        if (roll1.isTBR())
+            return 0;
         if (isStrike())
             return 1;
-        if (roll2.Equal(Roll.RollTBR))
-            return BowlingGame.TBR;
-        else
-            return 2;
+        if (roll2.isTBR())
+            return 0;
+        return 2;
     }
 
 
@@ -67,7 +66,7 @@ public class Frame {
                 displayFrame.mark2 = markForRoll(roll2);
             }
 
-        if (totalScore != BowlingGame.TBR)
+        if (totalScore != BowlingGame.TBS)
             displayFrame.displayScore = String.format("%3s", totalScore);
         else
             displayFrame.displayScore = "   ";
@@ -80,13 +79,13 @@ public class Frame {
     }
 
     int pinsRemaining(){
-        if (roll1.Equal(Roll.RollTBR))
+        if (roll1.isTBR())
             return 10 ;
         return 10 - roll1.toInteger();
     }
 
     int currentRoll(){
-        if (roll1.Equal(Roll.RollTBR))
+        if (roll1.isTBR())
             return 1;
         return 2;
     }
@@ -94,7 +93,7 @@ public class Frame {
     static String markForRoll(Roll roll) {
         if (roll.Equal(new Roll(0)) )
             return "-";
-        if (roll.notEqual(Roll.RollTBR))
+        if (roll.isNotTBR())
             return String.valueOf(roll);
         return " ";
     }
@@ -105,6 +104,6 @@ public class Frame {
     }
 
     boolean isStrike() {
-        return roll1.Equal(new Roll(10));
+        return roll1.isStrike();
     }
 }

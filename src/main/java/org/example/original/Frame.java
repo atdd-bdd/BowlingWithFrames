@@ -42,7 +42,7 @@ public class Frame {
 
     private int incrementRollIndexBy() {
         if (roll1 == BowlingGame.TBR)
-            return BowlingGame.TBR;
+            return 0;
         if (isStrike())
             return 1;
         if (roll2 == BowlingGame.TBR)

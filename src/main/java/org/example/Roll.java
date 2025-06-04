@@ -1,29 +1,35 @@
 package org.example;
 
 public class Roll {
-    public static final int TBR = -1;
-    public static final Roll RollTBR = new Roll(TBR);
+    static final int TBR_VALUE = -1;
+    public static final Roll TBR = new Roll(TBR_VALUE);
+    public static final Roll ZERO = new Roll(0);
 
     public static final Roll Strike = new Roll (10);
     private final int value;
     public Roll(String string){
         value = Integer.parseInt(string);
-        if (value < TBR || value > 10)
+        if (value < TBR_VALUE || value > 10)
             throw new NumberFormatException("Roll is not valid " + string);
     }
     public Roll(int  in){
         value = in;
-        if (value < TBR || value > 10)
+        if (value < TBR_VALUE || value > 10)
             throw new NumberFormatException("Roll is not valid " + in);
     }
     public boolean isTBR(){
-        return value == TBR;
+        return value == TBR_VALUE;
+    }
+
+    public boolean isNotTBR(){
+        return value != TBR_VALUE;
     }
     public String toString(){
         return ""+ value;
     }
 
     public boolean equals(Object obj){
+
         Roll other = (Roll) obj;
         return this.value == other.value;
     }
@@ -46,9 +52,7 @@ public class Roll {
     public boolean lessThanOrEqual(Roll other) {
         return this.value <= other.value;
     }
-    public boolean notEqual(Roll other){
-        return this.value != other.value;
-    }
+
     public boolean Equal(Roll other){
         return this.value == other.value;
     }
@@ -56,8 +60,9 @@ public class Roll {
         return Integer.valueOf(value);
     }
     public Roll add(Roll other){
-        if (this.value == TBR || other.value == TBR)
-            return new Roll(TBR);
+        if (this.value == TBR_VALUE || other.value == TBR_VALUE)
+            return new Roll(TBR_VALUE);
         return new Roll(this.value + other.value);
     }
+
 }

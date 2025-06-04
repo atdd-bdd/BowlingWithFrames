@@ -11,17 +11,17 @@ public class TenthFrame extends Frame {
         if (isSpare())
             displayFrame.mark2 = "/";
         else {
-            if (roll2.Equal(new Roll(10)))
+            if (roll2.isStrike())
                 displayFrame.mark2 = "X";
             else
                 displayFrame.mark2 = markForRoll(roll2);
         }
-        if (roll3.Equal(new Roll(10)))
+        if (roll3.isStrike())
             displayFrame.mark3 = "X";
         else
             displayFrame.mark3 = markForRoll(roll3);
 
-        if (totalScore != BowlingGame.TBR)
+        if (totalScore != BowlingGame.TBS)
             displayFrame.displayScore = String.format("%3s", totalScore);
         else
             displayFrame.displayScore = "   ";
@@ -40,16 +40,16 @@ public class TenthFrame extends Frame {
     }
 
     int pinsRemaining() {
-        if (roll1.Equal(Roll.RollTBR))
+        if (roll1.isTBR())
             return 10;
         if (isStrike()) {
-            if (roll2.Equal(Roll.RollTBR))
+            if (roll2.isTBR())
                 return 10;
-            if (roll2.Equal(new Roll(10)))
+            if (roll2.isStrike())
                 return 10;
             return 10 - roll2.toInteger();
         }
-        if (roll2.notEqual(Roll.RollTBR))
+        if (roll2.isNotTBR())
             return 10 - roll1.toInteger();
         if (isSpare())
             return 10;
@@ -57,9 +57,9 @@ public class TenthFrame extends Frame {
     }
 
     int currentRoll() {
-        if (roll1.Equal(Roll.RollTBR))
+        if (roll1.isTBR())
             return 1;
-        if (roll2.Equal(Roll.RollTBR))
+        if (roll2.isTBR())
             return 2;
         return 3;
     }

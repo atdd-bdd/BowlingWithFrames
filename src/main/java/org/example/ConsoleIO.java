@@ -23,7 +23,7 @@ public class ConsoleIO {
         }
         console.writer().println(statusLine);
         String input;
-        Roll result = new Roll(Roll.TBR);
+        Roll result = Roll.TBR;
         boolean valid = false;
         while (!valid) {
             input = console.readLine(prompt);
@@ -48,7 +48,7 @@ public class ConsoleIO {
         if (ic.rollNumber == 1){
               if (input.equals("X"))
                 return new Roll(10);
-            return new Roll(Roll.TBR);
+            return Roll.TBR;
         }
         if (ic.rollNumber == 2) {
             if (input.equals("/"))
@@ -56,7 +56,7 @@ public class ConsoleIO {
             if (ic.frameNumber == 10)
                 if (input.equals("X"))
                     return new Roll(10);
-            return new Roll(Roll.TBR);
+            return Roll.TBR;
         }
         if (ic.rollNumber == 3) {
             if (ic.frameNumber != 10) {
@@ -65,9 +65,9 @@ public class ConsoleIO {
             }
             if (input.equals("X"))
                 new Roll(10);
-            return new Roll(Roll.TBR);
+            return Roll.TBR;
         }
-        return new Roll(Roll.TBR);
+        return Roll.TBR;
     }
 
     public String createOutput(DisplayFrame[] frames) {

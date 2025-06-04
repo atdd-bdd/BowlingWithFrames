@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class BowlingGame {
-    static final int TBR = -1;
+    static final int TBS = -1;
     static final int ROLL_COUNT = 21;
     Roll[] rolls = new Roll[ROLL_COUNT];
 
@@ -17,7 +17,7 @@ public class BowlingGame {
             new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame()};
 
     public BowlingGame() {
-        Arrays.fill(rolls, new Roll(TBR));
+        Arrays.fill(rolls, Roll.TBR);
     }
 
     int roll_index = 0;
@@ -33,9 +33,15 @@ public class BowlingGame {
         return true;
     }
 
-    public void setRolls(List<Integer> values) {
+    public void setRollsWithInteger(List<Integer> values) {
         for (int i = 0; i < values.size(); i++) {
             rolls[i] = new Roll(values.get(i));
+        }
+        roll_index = values.size();
+    }
+    public void setRolls(List<Roll> values) {
+        for (int i = 0; i < values.size(); i++) {
+            rolls[i] = values.get(i);
         }
         roll_index = values.size();
     }
@@ -43,8 +49,8 @@ public class BowlingGame {
     public List<Integer> getRolls() {
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < ROLL_COUNT; i++) {
-            if (rolls[i].notEqual(new Roll(TBR)))
-                result.add(rolls[i].toInteger());
+            if (rolls[i].isNotTBR())
+                result.add(rolls[i].toInteger()) ;
         }
         return result;
     }
@@ -56,7 +62,7 @@ public class BowlingGame {
             Frame frame = frames[frameIndex];
             int incrementRoll =
                     frame.incrementRollIndexForNextFrame(rolls[start], rolls[start + 1], rolls[start + 2], previousFrameScore);
-            if (incrementRoll != BowlingGame.TBR) {
+            if (incrementRoll != 0) {
                 previousFrameScore = frame.getTotalScore();
                 start += incrementRoll;
                 currentFrame = frameIndex+1;

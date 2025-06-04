@@ -8,13 +8,13 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Feature_Bowling_glue {
-    final String DNCString = "?DNC?";
+
 
     BowlingGame game = new BowlingGame();
 
     void Given_rolls_are(List<List<String>> values) {
-        List<List<Integer>> is = convertListToInteger(values);
-        List<Integer> rolls = is.get(0);
+        List<List<Roll>> is = convertListToRoll(values);
+        List<Roll> rolls = is.get(0);
         game.setRolls(rolls);
 
     }
@@ -115,7 +115,7 @@ class Feature_Bowling_glue {
         List<Integer> full = new ArrayList<>();
         full.addAll(rolls);
         full.addAll(is.get(0));
-        game.setRolls(full);
+        game.setRollsWithInteger(full);
     }
 
     void Then_Then_tenth_frame_values_are(List<FrameValues> values) {
@@ -154,5 +154,16 @@ class Feature_Bowling_glue {
         return classList;
     }
 
+    public static List<List<Roll>> convertListToRoll(List<List<String>> stringList) {
+        List<List<Roll>> classList = new ArrayList<>();
+        for (List<String> innerList : stringList) {
+            List<Roll> innerClassList = new ArrayList<>();
+            for (String s : innerList) {
+                innerClassList.add(new Roll(s));
+            }
+            classList.add(innerClassList);
+        }
+        return classList;
+    }
 
 }
