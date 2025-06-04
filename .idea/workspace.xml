@@ -7,18 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7924b5ac-85a4-44aa-ba11-5d12081fcf1d" name="Changes" comment="A couple of changes to use Roll methods.">
+    <list default="true" id="7924b5ac-85a4-44aa-ba11-5d12081fcf1d" name="Changes" comment="Cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BowlingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BowlingGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ConsoleIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ConsoleIO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Frame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Roll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Roll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TenthFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TenthFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/original/BowlingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/original/BowlingGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/original/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/original/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/Feature_Bowling_glue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/Feature_Bowling_glue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1749006468870</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="A couple of changes to use Roll methods.">
+      <created>1749044686955</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1749044686955</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -175,7 +177,8 @@
     <MESSAGE value="Added some design decisions" />
     <MESSAGE value="Altered to use Roll class, rather than Integer" />
     <MESSAGE value="A couple of changes to use Roll methods." />
-    <option name="LAST_COMMIT_MESSAGE" value="A couple of changes to use Roll methods." />
+    <MESSAGE value="Cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

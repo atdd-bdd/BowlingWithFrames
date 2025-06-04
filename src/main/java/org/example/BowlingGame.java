@@ -24,7 +24,7 @@ public class BowlingGame {
 
     public boolean addARoll(Roll roll) {
         int pinsRemaining = frames[currentFrame].pinsRemaining();
-        if (roll.greaterThan(new Roll(pinsRemaining))|| roll.lessThan(new Roll(0)))
+        if (roll.greaterThan(new Roll(pinsRemaining))|| roll.lessThan(Roll.Zero))
             return false;
         if (roll_index >= rolls.length)
             return false;

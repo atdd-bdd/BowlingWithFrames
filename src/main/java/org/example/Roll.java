@@ -3,7 +3,7 @@ package org.example;
 public class Roll {
     static final int TBR_VALUE = -1;
     public static final Roll TBR = new Roll(TBR_VALUE);
-    public static final Roll ZERO = new Roll(0);
+    public static final Roll Zero = new Roll(0);
 
     public static final Roll Strike = new Roll (10);
     private final int value;
@@ -29,7 +29,9 @@ public class Roll {
     }
 
     public boolean equals(Object obj){
-
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
         Roll other = (Roll) obj;
         return this.value == other.value;
     }
@@ -57,7 +59,7 @@ public class Roll {
         return this.value == other.value;
     }
     public Integer toInteger(){
-        return Integer.valueOf(value);
+        return value;
     }
     public Roll add(Roll other){
         if (this.value == TBR_VALUE || other.value == TBR_VALUE)

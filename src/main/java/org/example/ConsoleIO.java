@@ -6,10 +6,10 @@ public class ConsoleIO {
         System.out.println(value);
     }
 
-    void clearScreen() {
-        System.out.print("\033[2J");  // ANSI escape code to clear the screen
-        System.out.print("\033[H");   // Move cursor to the home position
-    }
+//    void clearScreen() {
+//        System.out.print("\033[2J");  // ANSI escape code to clear the screen
+//        System.out.print("\033[H");   // Move cursor to the home position
+//    }
 
     Roll getInput(InputControl ic) {
         String statusLine = "Frame " + ic.frameNumber + " Roll " + ic.rollNumber +
@@ -29,11 +29,11 @@ public class ConsoleIO {
             input = console.readLine(prompt);
             try {
                 result = new Roll(input);
-                if (result.greaterThanOrEqual(new Roll(0))& result.lessThanOrEqual(new Roll(ic.pinsRemaining)))
+                if (result.greaterThanOrEqual(Roll.Zero)& result.lessThanOrEqual(new Roll(ic.pinsRemaining)))
                     valid = true;
             } catch (NumberFormatException e) {
                 result = checkSymbolInput(input, ic);
-                if (result.greaterThanOrEqual(new Roll(0)))
+                if (result.greaterThanOrEqual(Roll.Zero))
                     valid = true;
             }
             if (!valid)
@@ -43,11 +43,12 @@ public class ConsoleIO {
     }
 
     private Roll checkSymbolInput(String input, InputControl ic) {
+        input = input.toUpperCase();
         if (input.equals("-"))
-            return new Roll(0);
+            return Roll.Zero;
         if (ic.rollNumber == 1){
               if (input.equals("X"))
-                return new Roll(10);
+                return Roll.Strike;
             return Roll.TBR;
         }
         if (ic.rollNumber == 2) {
@@ -55,16 +56,16 @@ public class ConsoleIO {
                 return new Roll(ic.pinsRemaining);
             if (ic.frameNumber == 10)
                 if (input.equals("X"))
-                    return new Roll(10);
+                    return Roll.Strike;
             return Roll.TBR;
         }
         if (ic.rollNumber == 3) {
             if (ic.frameNumber != 10) {
                 System.out.println("**** Error in model 3 rolls in not 10th frame");
-                return new Roll(0);
+                return Roll.Zero;
             }
             if (input.equals("X"))
-                new Roll(10);
+                return Roll.Strike;
             return Roll.TBR;
         }
         return Roll.TBR;

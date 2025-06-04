@@ -18,7 +18,6 @@ public class Frame {
         this.roll1 = roll1;
         this.roll2 = roll2;
         this.roll3 = roll3;
-        System.out.println("Adding rolls " + roll1 + " " + roll2 + " " + roll3);
         this.previousFrameScore = previousFrameScore;
         scoreFrame();
         return incrementRollIndexBy();
@@ -29,7 +28,6 @@ public class Frame {
     }
 
     private void scoreFrame() {
-        System.out.println("Scoring rolls " + roll1 + " " + roll2 + " " + roll3);
         if (isStrike()) {
             if (roll3.isNotTBR())
                 frameScore = roll1.toInteger() + roll2.toInteger() + roll3.toInteger();
@@ -40,7 +38,6 @@ public class Frame {
             frameScore =  roll1.add(roll2).toInteger();
         if (frameScore != BowlingGame.TBS)
             totalScore = previousFrameScore + frameScore;
-        System.out.println("in score " + frameScore + " " + totalScore);
     }
 
     private int incrementRollIndexBy() {
@@ -91,7 +88,7 @@ public class Frame {
     }
 
     static String markForRoll(Roll roll) {
-        if (roll.Equal(new Roll(0)) )
+        if (roll.Equal(Roll.Zero) )
             return "-";
         if (roll.isNotTBR())
             return String.valueOf(roll);

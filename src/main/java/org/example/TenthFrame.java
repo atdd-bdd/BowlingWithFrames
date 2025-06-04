@@ -50,10 +50,9 @@ public class TenthFrame extends Frame {
             return 10 - roll2.toInteger();
         }
         if (roll2.isNotTBR())
-            return 10 - roll1.toInteger();
-        if (isSpare())
-            return 10;
-        return 0;
+            if (isSpare())
+                return 10;
+        return 10-roll1.toInteger();
     }
 
     int currentRoll() {
