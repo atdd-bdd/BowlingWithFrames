@@ -5,6 +5,39 @@ class Feature_Bowling{
 
 
     @Test
+    void test_Scenario_Domain_Term_Roll(){
+         Feature_Bowling_glue feature_Bowling_glue_object = new Feature_Bowling_glue();
+
+        List<ValueValid> objectList1 = List.of(
+             new ValueValid.Builder()
+                .setValue("0")
+                .setValid("true")
+                .setNotes("")
+                .build()
+            , new ValueValid.Builder()
+                .setValue("10")
+                .setValid("true")
+                .setNotes("")
+                .build()
+            , new ValueValid.Builder()
+                .setValue("11")
+                .setValid("false")
+                .setNotes("")
+                .build()
+            , new ValueValid.Builder()
+                .setValue("-2")
+                .setValid("false")
+                .setNotes("")
+                .build()
+            , new ValueValid.Builder()
+                .setValue("-1")
+                .setValid("true")
+                .setNotes("Used for To Be Rolled")
+                .build()
+            );
+        feature_Bowling_glue_object.Rule_Roll_is_between_0_and_10(objectList1);
+        }
+    @Test
     void test_Scenario_Adding_a_roll(){
          Feature_Bowling_glue feature_Bowling_glue_object = new Feature_Bowling_glue();
 
@@ -61,7 +94,7 @@ class Feature_Bowling{
         feature_Bowling_glue_object.Then_rolls_become(stringListList3);
         }
     @Test
-    void test_Scenario_Full_Game_Display_and_Input(){
+    void test_Scenario_Full_Game_Compute_and_Display(){
          Feature_Bowling_glue feature_Bowling_glue_object = new Feature_Bowling_glue();
 
         List<List<String>> stringListList1 = List.of(

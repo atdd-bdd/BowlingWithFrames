@@ -7,20 +7,30 @@ class Feature_Bowling_glue {
     final String DNCString = "?DNC?";
 
 
+    void Rule_Roll_is_between_0_and_10(List<ValueValid> values ) {
+        System.out.println("---  " + "Rule_Roll_is_between_0_and_10");
+        for (ValueValid value : values){
+             System.out.println(value);
+             // Add calls to production code and asserts
+              ValueValidInternal i = value.toValueValidInternal();
+              }
+        fail("Must implement");
+    }
+
     void Given_rolls_are(List<List<String>> values ) {
-    List<List<Integer>> is = convertList(values);
+    List<List<Roll>> is = convertList(values);
     System.out.println(is);
         fail("Must implement");
     }
 
     void When_roll_is(List<List<String>> values ) {
-    List<List<Integer>> is = convertList(values);
+    List<List<Roll>> is = convertList(values);
     System.out.println(is);
         fail("Must implement");
     }
 
     void Then_rolls_become(List<List<String>> values ) {
-    List<List<Integer>> is = convertList(values);
+    List<List<Roll>> is = convertList(values);
     System.out.println(is);
         fail("Must implement");
     }
@@ -78,7 +88,7 @@ class Feature_Bowling_glue {
     }
 
     void Given_rolls_for_tenth_frame_are(List<List<String>> values ) {
-    List<List<Integer>> is = convertList(values);
+    List<List<Roll>> is = convertList(values);
     System.out.println(is);
         fail("Must implement");
     }
@@ -93,84 +103,60 @@ class Feature_Bowling_glue {
         fail("Must implement");
     }
 
-              public static List<List<Integer>> convertList(List<List<String>> stringList) {
-                  List<List<Integer>> classList = new ArrayList<>();
+              public static List<List<Roll>> convertList(List<List<String>> stringList) {
+                  List<List<Roll>> classList = new ArrayList<>();
                   for (List<String> innerList : stringList) {
-                      List<Integer> innerClassList = new ArrayList<>();
+                      List<Roll> innerClassList = new ArrayList<>();
                       for (String s : innerList) {
-                          innerClassList.add(Integer.valueOf(s));
+                          innerClassList.add(new Roll(s));
                       }
                       classList.add(innerClassList);
                   }
               return classList;
               }
 
-              public static List<List<Integer>> convertList(List<List<String>> stringList) {
-                  List<List<Integer>> classList = new ArrayList<>();
+              public static List<List<Roll>> convertList(List<List<String>> stringList) {
+                  List<List<Roll>> classList = new ArrayList<>();
                   for (List<String> innerList : stringList) {
-                      List<Integer> innerClassList = new ArrayList<>();
+                      List<Roll> innerClassList = new ArrayList<>();
                       for (String s : innerList) {
-                          innerClassList.add(Integer.valueOf(s));
+                          innerClassList.add(new Roll(s));
                       }
                       classList.add(innerClassList);
                   }
               return classList;
               }
 
-              public static List<List<Integer>> convertList(List<List<String>> stringList) {
-                  List<List<Integer>> classList = new ArrayList<>();
+              public static List<List<Roll>> convertList(List<List<String>> stringList) {
+                  List<List<Roll>> classList = new ArrayList<>();
                   for (List<String> innerList : stringList) {
-                      List<Integer> innerClassList = new ArrayList<>();
+                      List<Roll> innerClassList = new ArrayList<>();
                       for (String s : innerList) {
-                          innerClassList.add(Integer.valueOf(s));
+                          innerClassList.add(new Roll(s));
                       }
                       classList.add(innerClassList);
                   }
               return classList;
               }
 
-              public static List<List<Integer>> convertList(List<List<String>> stringList) {
-                  List<List<Integer>> classList = new ArrayList<>();
+              public static List<List<Roll>> convertList(List<List<String>> stringList) {
+                  List<List<Roll>> classList = new ArrayList<>();
                   for (List<String> innerList : stringList) {
-                      List<Integer> innerClassList = new ArrayList<>();
+                      List<Roll> innerClassList = new ArrayList<>();
                       for (String s : innerList) {
-                          innerClassList.add(Integer.valueOf(s));
+                          innerClassList.add(new Roll(s));
                       }
                       classList.add(innerClassList);
                   }
               return classList;
               }
 
-              public static List<List<Integer>> convertList(List<List<String>> stringList) {
-                  List<List<Integer>> classList = new ArrayList<>();
+              public static List<List<Roll>> convertList(List<List<String>> stringList) {
+                  List<List<Roll>> classList = new ArrayList<>();
                   for (List<String> innerList : stringList) {
-                      List<Integer> innerClassList = new ArrayList<>();
+                      List<Roll> innerClassList = new ArrayList<>();
                       for (String s : innerList) {
-                          innerClassList.add(Integer.valueOf(s));
-                      }
-                      classList.add(innerClassList);
-                  }
-              return classList;
-              }
-
-              public static List<List<Boolean>> convertList(List<List<String>> stringList) {
-                  List<List<Boolean>> classList = new ArrayList<>();
-                  for (List<String> innerList : stringList) {
-                      List<Boolean> innerClassList = new ArrayList<>();
-                      for (String s : innerList) {
-                          innerClassList.add(Boolean.parseBoolean(s));
-                      }
-                      classList.add(innerClassList);
-                  }
-              return classList;
-              }
-
-              public static List<List<Integer>> convertList(List<List<String>> stringList) {
-                  List<List<Integer>> classList = new ArrayList<>();
-                  for (List<String> innerList : stringList) {
-                      List<Integer> innerClassList = new ArrayList<>();
-                      for (String s : innerList) {
-                          innerClassList.add(Integer.valueOf(s));
+                          innerClassList.add(new Roll(s));
                       }
                       classList.add(innerClassList);
                   }
@@ -189,60 +175,84 @@ class Feature_Bowling_glue {
               return classList;
               }
 
-              public static List<List<Integer>> convertList(List<List<String>> stringList) {
-                  List<List<Integer>> classList = new ArrayList<>();
+              public static List<List<Roll>> convertList(List<List<String>> stringList) {
+                  List<List<Roll>> classList = new ArrayList<>();
                   for (List<String> innerList : stringList) {
-                      List<Integer> innerClassList = new ArrayList<>();
+                      List<Roll> innerClassList = new ArrayList<>();
                       for (String s : innerList) {
-                          innerClassList.add(Integer.valueOf(s));
+                          innerClassList.add(new Roll(s));
                       }
                       classList.add(innerClassList);
                   }
               return classList;
               }
 
-              public static List<List<Integer>> convertList(List<List<String>> stringList) {
-                  List<List<Integer>> classList = new ArrayList<>();
+              public static List<List<Boolean>> convertList(List<List<String>> stringList) {
+                  List<List<Boolean>> classList = new ArrayList<>();
                   for (List<String> innerList : stringList) {
-                      List<Integer> innerClassList = new ArrayList<>();
+                      List<Boolean> innerClassList = new ArrayList<>();
                       for (String s : innerList) {
-                          innerClassList.add(Integer.valueOf(s));
+                          innerClassList.add(Boolean.parseBoolean(s));
                       }
                       classList.add(innerClassList);
                   }
               return classList;
               }
 
-              public static List<List<Integer>> convertList(List<List<String>> stringList) {
-                  List<List<Integer>> classList = new ArrayList<>();
+              public static List<List<Roll>> convertList(List<List<String>> stringList) {
+                  List<List<Roll>> classList = new ArrayList<>();
                   for (List<String> innerList : stringList) {
-                      List<Integer> innerClassList = new ArrayList<>();
+                      List<Roll> innerClassList = new ArrayList<>();
                       for (String s : innerList) {
-                          innerClassList.add(Integer.valueOf(s));
+                          innerClassList.add(new Roll(s));
                       }
                       classList.add(innerClassList);
                   }
               return classList;
               }
 
-              public static List<List<Integer>> convertList(List<List<String>> stringList) {
-                  List<List<Integer>> classList = new ArrayList<>();
+              public static List<List<Roll>> convertList(List<List<String>> stringList) {
+                  List<List<Roll>> classList = new ArrayList<>();
                   for (List<String> innerList : stringList) {
-                      List<Integer> innerClassList = new ArrayList<>();
+                      List<Roll> innerClassList = new ArrayList<>();
                       for (String s : innerList) {
-                          innerClassList.add(Integer.valueOf(s));
+                          innerClassList.add(new Roll(s));
                       }
                       classList.add(innerClassList);
                   }
               return classList;
               }
 
-              public static List<List<Integer>> convertList(List<List<String>> stringList) {
-                  List<List<Integer>> classList = new ArrayList<>();
+              public static List<List<Roll>> convertList(List<List<String>> stringList) {
+                  List<List<Roll>> classList = new ArrayList<>();
                   for (List<String> innerList : stringList) {
-                      List<Integer> innerClassList = new ArrayList<>();
+                      List<Roll> innerClassList = new ArrayList<>();
                       for (String s : innerList) {
-                          innerClassList.add(Integer.valueOf(s));
+                          innerClassList.add(new Roll(s));
+                      }
+                      classList.add(innerClassList);
+                  }
+              return classList;
+              }
+
+              public static List<List<Roll>> convertList(List<List<String>> stringList) {
+                  List<List<Roll>> classList = new ArrayList<>();
+                  for (List<String> innerList : stringList) {
+                      List<Roll> innerClassList = new ArrayList<>();
+                      for (String s : innerList) {
+                          innerClassList.add(new Roll(s));
+                      }
+                      classList.add(innerClassList);
+                  }
+              return classList;
+              }
+
+              public static List<List<Roll>> convertList(List<List<String>> stringList) {
+                  List<List<Roll>> classList = new ArrayList<>();
+                  for (List<String> innerList : stringList) {
+                      List<Roll> innerClassList = new ArrayList<>();
+                      for (String s : innerList) {
+                          innerClassList.add(new Roll(s));
                       }
                       classList.add(innerClassList);
                   }

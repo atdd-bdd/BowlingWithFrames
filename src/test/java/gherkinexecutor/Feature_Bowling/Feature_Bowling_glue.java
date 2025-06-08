@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 class Feature_Bowling_glue {
 
@@ -130,6 +131,24 @@ class Feature_Bowling_glue {
                 System.out.println(" internal "+ i.roll1 + " " + i.roll2 + " " + i.roll3);
                 Frame f = game.frames[9];
                 checkAllFields(i, f);
+            }
+        }
+    }
+    void Rule_Roll_is_between_0_and_10(List<ValueValid> values ) {
+        System.out.println("---  " + "Rule_Roll_is_between_0_and_10");
+        for (ValueValid value : values) {
+            System.out.println(value);
+            boolean expectedException = !Boolean.parseBoolean(value.valid);
+            try {
+                new Roll(value.value);
+                if (expectedException) {
+                    fail("Invalid value did not throw exeception "
+                            + value.value + " " + value.notes);
+                }
+            } catch (Exception e) {
+                if (!expectedException)
+                    fail("Valid value threw exeception "
+                            + value.value + " " + value.notes);
             }
         }
     }
