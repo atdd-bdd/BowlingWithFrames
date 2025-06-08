@@ -7,13 +7,13 @@ import java.util.List;
 public class BowlingGame {
     static final int TBS = -1;
     static final int ROLL_COUNT = 21;
-    Roll[] rolls = new Roll[ROLL_COUNT];
+    final Roll[] rolls = new Roll[ROLL_COUNT];
 
     int previousFrame = 0;
     int currentFrame = 0;
-    public Frame[] frames = {new Frame(), new Frame(), new Frame(), new Frame(), new Frame(),
+    public final Frame[] frames = {new Frame(), new Frame(), new Frame(), new Frame(), new Frame(),
                              new Frame(), new Frame(), new Frame(), new Frame(), new TenthFrame()};
-    public DisplayFrame[] displayFrames  = {new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame(),
+    public final DisplayFrame[] displayFrames  = {new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame(),
             new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame()};
 
     public BowlingGame() {
@@ -31,13 +31,6 @@ public class BowlingGame {
         rolls[roll_index] = roll;
         roll_index++;
         return true;
-    }
-
-    public void setRolls(List<Roll> values) {
-        for (int i = 0; i < values.size(); i++) {
-            rolls[i] = values.get(i);
-        }
-        roll_index = values.size();
     }
 
     public List<Integer> getRolls() {

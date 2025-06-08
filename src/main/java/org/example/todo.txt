@@ -6,7 +6,7 @@ Should Roll do a computation of pins remaining (or at least the subtraction?)
 
 Design Decisions:
 
-Should addRole call somputeScore()?
+Should addRole call computeScore()?
 
 If so, then check if game is already complete?
 

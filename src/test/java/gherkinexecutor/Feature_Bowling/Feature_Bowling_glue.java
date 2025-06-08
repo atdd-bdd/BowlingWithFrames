@@ -11,12 +11,12 @@ import static org.junit.jupiter.api.Assertions.fail;
 class Feature_Bowling_glue {
 
 
-    BowlingGame game = new BowlingGame();
+    final BowlingGame game = new BowlingGame();
 
     void Given_rolls_are(List<List<String>> values) {
         List<List<Roll>> is = convertListToRoll(values);
         List<Roll> rolls = is.get(0);
-        game.setRolls(rolls);
+        setRolls(rolls);
 
     }
 
@@ -120,7 +120,7 @@ class Feature_Bowling_glue {
         List<Roll> full = new ArrayList<>();
         full.addAll(rolls);
         full.addAll(is.get(0));
-        game.setRolls(full);
+        setRolls(full);
     }
 
     void Then_Then_tenth_frame_values_are(List<FrameValues> values) {
@@ -142,14 +142,20 @@ class Feature_Bowling_glue {
             try {
                 new Roll(value.value);
                 if (expectedException) {
-                    fail("Invalid value did not throw exeception "
+                    fail("Invalid value did not throw exception "
                             + value.value + " " + value.notes);
                 }
             } catch (Exception e) {
                 if (!expectedException)
-                    fail("Valid value threw exeception "
+                    fail("Valid value threw exception "
                             + value.value + " " + value.notes);
             }
+        }
+    }
+
+    public void setRolls(List<Roll> list) {
+        for (Roll roll : list){
+            game.addARoll(roll);
         }
     }
 
