@@ -1,5 +1,6 @@
 package gherkinexecutor.Feature_Bowling;
 import java.util.*;
+import org.example.*;
 class ValueValid{
     String value = "0";
     String valid = "false";

@@ -2267,6 +2267,7 @@ static class Configuration {
     // Must include  semicolon if needed
     static {
         linesToAddForDataAndGlue.add("import java.util.*;"); // as an example
+        linesToAddForDataAndGlue.add("import org.example.*;"); // as an example
     }
 
     public static final List<String> featureFiles = new ArrayList<>();

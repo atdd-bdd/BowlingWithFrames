@@ -1,38 +1,39 @@
 package gherkinexecutor.Feature_Bowling;
 import java.util.*;
+import org.example.*;
 class FrameValuesInternal{
      Integer frame;
-     Integer roll1;
-     Integer roll2;
-     Integer roll3;
-     Integer score;
-     Integer totalScore;
+     Roll roll1;
+     Roll roll2;
+     Roll roll3;
+     Score score;
+     Score totalScore;
      
     public static String toDataTypeString() {
         return "FrameValuesInternal {"
         +"Integer " 
-        +"Integer " 
-        +"Integer " 
-        +"Integer " 
-        +"Integer " 
-        +"Integer " 
+        +"Roll " 
+        +"Roll " 
+        +"Roll " 
+        +"Score " 
+        +"Score " 
             + "} "; }  
     FrameValues toFrameValues() {
         return new FrameValues(
         String.valueOf(frame)
-        ,String.valueOf(roll1)
-        ,String.valueOf(roll2)
-        ,String.valueOf(roll3)
-        ,String.valueOf(score)
-        ,String.valueOf(totalScore)
+        ,roll1.toString()
+        ,roll2.toString()
+        ,roll3.toString()
+        ,score.toString()
+        ,totalScore.toString()
         ); }
     public FrameValuesInternal(
         Integer frame
-        ,Integer roll1
-        ,Integer roll2
-        ,Integer roll3
-        ,Integer score
-        ,Integer totalScore
+        ,Roll roll1
+        ,Roll roll2
+        ,Roll roll3
+        ,Score score
+        ,Score totalScore
         )  {
         this.frame = frame;
         this.roll1 = roll1;

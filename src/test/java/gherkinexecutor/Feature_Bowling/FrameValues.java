@@ -1,5 +1,6 @@
 package gherkinexecutor.Feature_Bowling;
 import java.util.*;
+import org.example.*;
 class FrameValues{
     String frame = "1";
     String roll1 = "-1";
@@ -199,10 +200,10 @@ class FrameValues{
     FrameValuesInternal toFrameValuesInternal() {
         return new FrameValuesInternal(
          Integer.valueOf(frame)
-        , Integer.valueOf(roll1)
-        , Integer.valueOf(roll2)
-        , Integer.valueOf(roll3)
-        , Integer.valueOf(score)
-        , Integer.valueOf(totalScore)
+        , new Roll(roll1)
+        , new Roll(roll2)
+        , new Roll(roll3)
+        , new Score(score)
+        , new Score(totalScore)
         ); }
     }

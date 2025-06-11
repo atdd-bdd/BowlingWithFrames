@@ -1,13 +1,20 @@
 package org.example;
 
 public class Score {
-    private static int TBS_VALUE = -1;
+    private static final int TBS_VALUE = -1;
     public static Score TBS = new Score(TBS_VALUE);
     private int value = TBS_VALUE;
-    public Score(int value){
-        this.value = value;
+    public Score(int in){
+        value = in;
+        if (value < TBS_VALUE || value > 300)
+            throw new NumberFormatException("Score is not valid " + in);
     }
 
+    public Score(String string){
+        value = Integer.parseInt(string);
+        if (value < TBS_VALUE || value > 300)
+            throw new NumberFormatException("Score is not valid " + string);
+    }
     public String toString(){
         if (value == TBS_VALUE)
             return "   ";

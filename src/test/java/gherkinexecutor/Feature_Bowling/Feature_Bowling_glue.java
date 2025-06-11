@@ -79,11 +79,11 @@ class Feature_Bowling_glue {
     }
 
     private static void checkAllFields(FrameValuesInternal i, Frame frame) {
-        assertEquals(new Roll(i.roll1), frame.roll1, "Roll 1");
-        assertEquals(new Roll(i.roll2), frame.roll2, " Roll 2");
-        assertEquals(new Roll(i.roll3), frame.roll3, " Roll 3");
-        assertEquals(new Score(i.score), frame.frameScore, "Frame Score");
-        assertEquals(new Score(i.totalScore), frame.totalScore, "Total Score");
+        assertEquals(i.roll1, frame.roll1, "Roll 1");
+        assertEquals(i.roll2, frame.roll2, " Roll 2");
+        assertEquals(i.roll3, frame.roll3, " Roll 3");
+        assertEquals(i.score, frame.frameScore, "Frame Score");
+        assertEquals(i.totalScore, frame.totalScore, "Total Score");
     }
 
     void Given_frame_values_are_as_previous() {

@@ -1,7 +1,6 @@
 package gherkinexecutor.Feature_Bowling;
 import org.junit.jupiter.api.*;
 import java.util.List;
-@SuppressWarnings("NewClassNamingConvention")
 class Feature_Bowling{
 
 

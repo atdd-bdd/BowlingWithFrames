@@ -90,11 +90,11 @@ Then rolls become                               # ListOfListOfObject Roll
 * Data FrameValues
 | Name        | Default  | DataType  |
 | Frame       | 1        | Integer   |
-| Roll1       | TBR      | Integer   |
-| Roll2       | TBR      | Integer   |
-| Roll3       | TBR      | Integer   |
-| Score       | TBS      | Integer   |
-| TotalScore  | TBS      | Integer   |
+| Roll1       | TBR      | Roll      |
+| Roll2       | TBR      | Roll      |
+| Roll3       | TBR      | Roll      |
+| Score       | TBS      | Score     |
+| TotalScore  | TBS      | Score     |
 Data FrameDisplay
 | Name        | Default  | DataType  | Notes                     |
 | Frame       |          | String    |                           |
