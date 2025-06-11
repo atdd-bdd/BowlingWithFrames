@@ -1,6 +1,9 @@
 package gherkinexecutor.Feature_Bowling;
 import java.util.*;
 import org.example.*;
+//noinspection CanBeFinal
+//noinspection UnusedImports
+@SuppressWarnings({"unused", "EnhancedSwitchMigration", "ClassCanBeRecord", "NewClassNamingConvention", "RedundantSuppression"})
 class ValueValid{
     String value = "0";
     String valid = "false";
@@ -35,6 +38,9 @@ class ValueValid{
                 && !_ValueValid.notes.equals("?DNC?"))
                 if (! _ValueValid.notes.equals(this.notes)) result = false;
              return result;  }
+//noinspection CanBeFinal
+//noinspection UnusedImports
+@SuppressWarnings({"unused", "EnhancedSwitchMigration", "ClassCanBeRecord", "NewClassNamingConvention", "RedundantSuppression"})
     public static class Builder {
         private String value = "0";
         private String valid = "false";

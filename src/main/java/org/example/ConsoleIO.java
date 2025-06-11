@@ -27,7 +27,6 @@ public class ConsoleIO {
         while (result.isTBR()) {
             input = console.readLine(prompt);
             result = checkInput(ic, input);
-            System.out.println("result is " + result);
             if (result.isTBR())
                 output("Invalid input " + input);
         }

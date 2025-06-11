@@ -1,10 +1,13 @@
 package gherkinexecutor.Feature_Bowling;
 import java.util.*;
 import org.example.*;
+//noinspection CanBeFinal
+//noinspection UnusedImports
+@SuppressWarnings({"unused", "EnhancedSwitchMigration", "ClassCanBeRecord", "NewClassNamingConvention", "RedundantSuppression"})
 class InputControlValuesInternal{
-     Integer frame;
-     Integer roll;
-     Integer remaining;
+     final Integer frame;
+     final Integer roll;
+     final Integer remaining;
      
     public static String toDataTypeString() {
         return "InputControlValuesInternal {"

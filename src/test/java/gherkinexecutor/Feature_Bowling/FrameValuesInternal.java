@@ -1,13 +1,16 @@
 package gherkinexecutor.Feature_Bowling;
 import java.util.*;
 import org.example.*;
+//noinspection CanBeFinal
+//noinspection UnusedImports
+@SuppressWarnings({"unused", "EnhancedSwitchMigration", "ClassCanBeRecord", "NewClassNamingConvention", "RedundantSuppression"})
 class FrameValuesInternal{
-     Integer frame;
-     Roll roll1;
-     Roll roll2;
-     Roll roll3;
-     Score score;
-     Score totalScore;
+     final Integer frame;
+     final Roll roll1;
+     final Roll roll2;
+     final Roll roll3;
+     final Score score;
+     final Score totalScore;
      
     public static String toDataTypeString() {
         return "FrameValuesInternal {"

@@ -1,6 +1,9 @@
 package gherkinexecutor.Feature_Bowling;
 import java.util.*;
 import org.example.*;
+//noinspection CanBeFinal
+//noinspection UnusedImports
+@SuppressWarnings({"unused", "EnhancedSwitchMigration", "ClassCanBeRecord", "NewClassNamingConvention", "RedundantSuppression"})
 class InputControlValues{
     String frame = "1";
     String roll = "1";
@@ -35,6 +38,9 @@ class InputControlValues{
                 && !_InputControlValues.remaining.equals("?DNC?"))
                 if (! _InputControlValues.remaining.equals(this.remaining)) result = false;
              return result;  }
+//noinspection CanBeFinal
+//noinspection UnusedImports
+@SuppressWarnings({"unused", "EnhancedSwitchMigration", "ClassCanBeRecord", "NewClassNamingConvention", "RedundantSuppression"})
     public static class Builder {
         private String frame = "1";
         private String roll = "1";

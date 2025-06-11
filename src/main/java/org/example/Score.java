@@ -2,8 +2,8 @@ package org.example;
 
 public class Score {
     private static final int TBS_VALUE = -1;
-    public static Score TBS = new Score(TBS_VALUE);
-    private int value = TBS_VALUE;
+    public static final Score TBS = new Score(TBS_VALUE);
+    private final int value;
     public Score(int in){
         value = in;
         if (value < TBS_VALUE || value > 300)

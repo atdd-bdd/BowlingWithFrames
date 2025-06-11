@@ -6,10 +6,10 @@ public class ConsoleIO {
         System.out.println(value);
     }
 
-    void clearScreen() {
-        System.out.print("\033[2J");  // ANSI escape code to clear the screen
-        System.out.print("\033[H");   // Move cursor to the home position
-    }
+//    void clearScreen() {
+//        System.out.print("\033[2J");  // ANSI escape code to clear the screen
+//        System.out.print("\033[H");   // Move cursor to the home position
+//    }
 
     int getInput(InputControl ic) {
         String statusLine = "Frame " + ic.frameNumber + " Roll " + ic.rollNumber +

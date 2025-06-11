@@ -1,12 +1,15 @@
 package gherkinexecutor.Feature_Bowling;
 import java.util.*;
 import org.example.*;
+//noinspection CanBeFinal
+//noinspection UnusedImports
+@SuppressWarnings({"unused", "EnhancedSwitchMigration", "ClassCanBeRecord", "NewClassNamingConvention", "RedundantSuppression"})
 class FrameDisplayInternal{
-     String frame;
-     String mark1;
-     String mark2;
-     String mark3;
-     String totalScore;
+     final String frame;
+     final String mark1;
+     final String mark2;
+     final String mark3;
+     final String totalScore;
      
     public static String toDataTypeString() {
         return "FrameDisplayInternal {"

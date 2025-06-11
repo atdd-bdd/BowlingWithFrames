@@ -1,10 +1,13 @@
 package gherkinexecutor.Feature_Bowling;
 import java.util.*;
 import org.example.*;
+//noinspection CanBeFinal
+//noinspection UnusedImports
+@SuppressWarnings({"unused", "EnhancedSwitchMigration", "ClassCanBeRecord", "NewClassNamingConvention", "RedundantSuppression"})
 class ValueValidInternal{
-     String value;
-     Boolean valid;
-     String notes;
+     final String value;
+     final Boolean valid;
+     final String notes;
      
     public static String toDataTypeString() {
         return "ValueValidInternal {"

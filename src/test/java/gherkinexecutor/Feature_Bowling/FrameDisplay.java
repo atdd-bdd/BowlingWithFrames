@@ -1,6 +1,9 @@
 package gherkinexecutor.Feature_Bowling;
 import java.util.*;
 import org.example.*;
+//noinspection CanBeFinal
+//noinspection UnusedImports
+@SuppressWarnings({"unused", "EnhancedSwitchMigration", "ClassCanBeRecord", "NewClassNamingConvention", "RedundantSuppression"})
 class FrameDisplay{
     String frame = "";
     String mark1 = "";
@@ -49,6 +52,9 @@ class FrameDisplay{
                 && !_FrameDisplay.totalScore.equals("?DNC?"))
                 if (! _FrameDisplay.totalScore.equals(this.totalScore)) result = false;
              return result;  }
+//noinspection CanBeFinal
+//noinspection UnusedImports
+@SuppressWarnings({"unused", "EnhancedSwitchMigration", "ClassCanBeRecord", "NewClassNamingConvention", "RedundantSuppression"})
     public static class Builder {
         private String frame = "";
         private String mark1 = "";

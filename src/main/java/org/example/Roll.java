@@ -6,7 +6,7 @@ public class Roll {
     public static final Roll Zero = new Roll(0);
 
     public static final Roll Strike = new Roll (10);
-    private int value = TBR_VALUE;
+    private final int value;
     public Roll(String string){
         value = Integer.parseInt(string);
         if (value < TBR_VALUE || value > 10)
