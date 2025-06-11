@@ -4,9 +4,8 @@ public class Frame {
     public Roll roll1 = Roll.TBR;
     public Roll roll2 = Roll.TBR;
     public Roll roll3 = Roll.TBR;
-    public int frameScore = BowlingGame.TBS;
-    public int totalScore = BowlingGame.TBS;
-
+    public Score frameScore = Score.TBS;
+    public Score totalScore = Score.TBS;
     public static final int PINS_IN_FRAME = 10;
 
     public String toString() {
@@ -14,9 +13,9 @@ public class Frame {
                 + frameScore + " total score " + totalScore;
     }
 
-    int previousFrameScore;
+    Score previousFrameScore;
 
-    int incrementRollIndexForNextFrame(Roll roll1, Roll roll2, Roll roll3, int previousFrameScore) {
+    int incrementRollIndexForNextFrame(Roll roll1, Roll roll2, Roll roll3, Score previousFrameScore) {
         this.roll1 = roll1;
         this.roll2 = roll2;
         this.roll3 = roll3;
@@ -25,21 +24,16 @@ public class Frame {
         return incrementRollIndexBy();
     }
 
-    int getTotalScore() {
+    Score getTotalScore() {
         return totalScore;
     }
 
     private void scoreFrame() {
-        if (isStrike()) {
-            if (roll3.isNotTBR())
-                frameScore = roll1.toInteger() + roll2.toInteger() + roll3.toInteger();
-        } else if (isSpare()) {
-            if (roll3.isNotTBR())
-                frameScore = roll1.toInteger() + roll2.toInteger() + roll3.toInteger();
-        } else if (roll2.isNotTBR())
-            frameScore =  roll1.add(roll2).toInteger();
-        if (frameScore != BowlingGame.TBS)
-            totalScore = previousFrameScore + frameScore;
+        if (isStrike() || isSpare())
+             frameScore = Score.addRolls(roll1, roll2, roll3);
+         else
+            frameScore = Score.addRolls(roll1, roll2);
+         totalScore = Score.addScores(previousFrameScore ,frameScore);
     }
 
     private int incrementRollIndexBy() {
@@ -64,11 +58,7 @@ public class Frame {
             else
                 displayFrame.mark2 = markForRoll(roll2);
             }
-
-        if (totalScore != BowlingGame.TBS)
-            displayFrame.displayScore = String.format("%3s", totalScore);
-        else
-            displayFrame.displayScore = "   ";
+        displayFrame.displayScore = totalScore.toString();
         return displayFrame;
 
     }
@@ -90,7 +80,7 @@ public class Frame {
     }
 
     static String markForRoll(Roll roll) {
-        if (roll.Equal(Roll.Zero) )
+        if (roll.equal(Roll.Zero) )
             return "-";
         if (roll.isNotTBR())
             return String.valueOf(roll);

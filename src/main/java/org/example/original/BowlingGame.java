@@ -33,12 +33,7 @@ public class BowlingGame {
         return true;
     }
 
-    public void setRolls(List<Integer> values) {
-        for (int i = 0; i < values.size(); i++) {
-            rolls[i] = values.get(i);
-        }
-        roll_index = values.size();
-    }
+
 
     public List<Integer> getRolls() {
         List<Integer> result = new ArrayList<>();

@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class BowlingGame {
-    static final int TBS = -1;
     static final int ROLL_COUNT = 21;
     final Roll[] rolls = new Roll[ROLL_COUNT];
 
@@ -43,7 +42,7 @@ public class BowlingGame {
     }
 
     public void computeScore() {
-        int previousFrameScore = 0;
+        Score previousFrameScore = new Score(0);
         int start = 0;
         for (int frameIndex = 0; frameIndex < frames.length; frameIndex++) {
             Frame frame = frames[frameIndex];
@@ -62,10 +61,11 @@ public class BowlingGame {
         }
 
     }
-    public void convertToDisplay() {
+    public  DisplayFrame [] convertToDisplay() {
         for (int frameIndex = 0; frameIndex < frames.length; frameIndex++) {
             displayFrames[frameIndex] = frames[frameIndex].convertToDisplay();
         }
+        return displayFrames;
     }
 
     public InputControl getInputControl()

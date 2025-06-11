@@ -20,11 +20,7 @@ public class TenthFrame extends Frame {
             displayFrame.mark3 = "X";
         else
             displayFrame.mark3 = markForRoll(roll3);
-
-        if (totalScore != BowlingGame.TBS)
-            displayFrame.displayScore = String.format("%3s", totalScore);
-        else
-            displayFrame.displayScore = "   ";
+        displayFrame.displayScore = totalScore.toString();
         return displayFrame;
 
     }

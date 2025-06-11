@@ -6,7 +6,7 @@ public class Roll {
     public static final Roll Zero = new Roll(0);
 
     public static final Roll Strike = new Roll (10);
-    private final int value;
+    private int value = TBR_VALUE;
     public Roll(String string){
         value = Integer.parseInt(string);
         if (value < TBR_VALUE || value > 10)
@@ -55,16 +55,11 @@ public class Roll {
         return this.value <= other.value;
     }
 
-    public boolean Equal(Roll other){
+    public boolean equal(Roll other){
         return this.value == other.value;
     }
     public Integer toInteger(){
         return value;
-    }
-    public Roll add(Roll other){
-        if (this.value == TBR_VALUE || other.value == TBR_VALUE)
-            return new Roll(TBR_VALUE);
-        return new Roll(this.value + other.value);
     }
 
 }

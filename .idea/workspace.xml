@@ -7,11 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7924b5ac-85a4-44aa-ba11-5d12081fcf1d" name="Changes" comment="Added test for Roll">
+    <list default="true" id="7924b5ac-85a4-44aa-ba11-5d12081fcf1d" name="Changes" comment="Eliminated some warnings.  Removed setRolls from BowlingGame">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Score.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/BowlingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/BowlingGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/original/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/original/todo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/todo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/Feature_Bowling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/Feature_Bowling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Roll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Roll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TenthFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TenthFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/original/BowlingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/original/BowlingGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/Feature_Bowling_glue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/gherkinexecutor/Feature_Bowling/Feature_Bowling_glue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +39,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2xiztFi9g1rbo2a1z7LXDQ1tzJB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -66,7 +72,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Feature_Bowling">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="BowlingWithFrames.main" />
@@ -196,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1749413337160</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Eliminated some warnings.  Removed setRolls from BowlingGame">
+      <created>1749414407930</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1749414407930</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -211,7 +224,8 @@
     <MESSAGE value="A little more cleanup" />
     <MESSAGE value="Updated documentation" />
     <MESSAGE value="Added test for Roll" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test for Roll" />
+    <MESSAGE value="Eliminated some warnings.  Removed setRolls from BowlingGame" />
+    <option name="LAST_COMMIT_MESSAGE" value="Eliminated some warnings.  Removed setRolls from BowlingGame" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

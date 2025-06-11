@@ -8,8 +8,8 @@ public class Main {
 //            io.clearScreen();    // Does not work
 
             game.computeScore();
-            game.convertToDisplay();
-            String s  = io.createOutput(game.displayFrames);
+
+            String s  = io.createOutput(game.convertToDisplay());
             io.output(s);
             io.output("");
             if (game.isNextFrame())

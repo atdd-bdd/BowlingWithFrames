@@ -82,8 +82,8 @@ class Feature_Bowling_glue {
         assertEquals(new Roll(i.roll1), frame.roll1, "Roll 1");
         assertEquals(new Roll(i.roll2), frame.roll2, " Roll 2");
         assertEquals(new Roll(i.roll3), frame.roll3, " Roll 3");
-        assertEquals(i.score, frame.frameScore, "Frame Score");
-        assertEquals(i.totalScore, frame.totalScore, "Total Score");
+        assertEquals(new Score(i.score), frame.frameScore, "Frame Score");
+        assertEquals(new Score(i.totalScore), frame.totalScore, "Total Score");
     }
 
     void Given_frame_values_are_as_previous() {
@@ -93,8 +93,8 @@ class Feature_Bowling_glue {
 
     void Then_display_is(String value) {
         System.out.println("---  " + "Then_display_is");
-        game.convertToDisplay();
-        String actual = new ConsoleIO().createOutput(game.displayFrames);
+
+        String actual = new ConsoleIO().createOutput(game.convertToDisplay());
         assertEquals(value, actual);
     }
 
