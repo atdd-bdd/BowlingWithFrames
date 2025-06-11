@@ -2,7 +2,7 @@
 
 **BowlingWithFrames** demonstrates several key aspects of software development, including the separation of the domain model from the user interface. It also incorporates Behavior-Driven Development (BDD) scenarios to specify both overall and specific application behaviors. These scenarios as tests helps ensure the application behaves as expected.
 
-The rules for scoring in bowling are relatively straightforward (see this [https://landofbowling.com/what-is-scoring-like-in-bowling-how-do-you-calculate-score/]()). However, the tenth frame behaves differently from the first nine, and there are multiple valid ways to implement it. Deciding how to handle such variations is a common challenge in software design.  
+The rules for scoring in bowling are relatively straightforward (see this [https://landofbowling.com/what-is-scoring-like-in-bowling-how-do-you-calculate-score/]()). However, the tenth frame behaves differently from the first nine, and there are multiple valid ways to implement it. Deciding how to handle such variations is a common challenge in software design.  This implementation represents one way amoung many possible ways.   The solution shows examples of domain term objects (Roll and Score).  
 
 ### A Coding Kata
 
@@ -38,5 +38,3 @@ Then input control is                            # ListOfObject InputControlValu
 | 10     | 3     | 10         |
 
 ```
-
-
