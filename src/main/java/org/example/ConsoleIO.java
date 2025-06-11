@@ -24,22 +24,28 @@ public class ConsoleIO {
         console.writer().println(statusLine);
         String input;
         Roll result = Roll.TBR;
-        boolean valid = false;
-        while (!valid) {
+        while (result.isTBR()) {
             input = console.readLine(prompt);
-            try {
-                result = new Roll(input);
-                if (result.greaterThanOrEqual(Roll.Zero)& result.lessThanOrEqual(new Roll(ic.pinsRemaining)))
-                    valid = true;
-            } catch (NumberFormatException e) {
-                result = checkSymbolInput(input, ic);
-                if (result.greaterThanOrEqual(Roll.Zero))
-                    valid = true;
-            }
-            if (!valid)
-                System.out.println("Invalid input " + input);
+            result = checkInput(ic, input);
+            System.out.println("result is " + result);
+            if (result.isTBR())
+                output("Invalid input " + input);
         }
         return result;
+    }
+
+    private Roll checkInput(InputControl ic, String input) {
+        try {
+            Roll result = new Roll(input);
+            if (result.greaterThanOrEqual(Roll.Zero)& result.lessThanOrEqual(new Roll(ic.pinsRemaining)))
+                return result;
+            return Roll.TBR;
+        } catch (NumberFormatException e) {
+            Roll result = checkSymbolInput(input, ic);
+            if (result.greaterThanOrEqual(Roll.Zero))
+                return result;
+            return Roll.TBR;
+        }
     }
 
     private Roll checkSymbolInput(String input, InputControl ic) {
@@ -61,7 +67,7 @@ public class ConsoleIO {
         }
         if (ic.rollNumber == 3) {
             if (ic.frameNumber != 10) {
-                System.out.println("**** Error in model 3 rolls in not 10th frame");
+                output("**** Error in model 3 rolls in not 10th frame");
                 return Roll.Zero;
             }
             if (input.equals("X"))
