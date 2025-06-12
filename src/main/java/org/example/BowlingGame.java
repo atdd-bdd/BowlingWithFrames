@@ -11,8 +11,8 @@ public class BowlingGame {
     int previousFrame = 0;
     int currentFrame = 0;
     public final Frame[] frames = {new Frame(), new Frame(), new Frame(), new Frame(), new Frame(),
-                             new Frame(), new Frame(), new Frame(), new Frame(), new TenthFrame()};
-    public final DisplayFrame[] displayFrames  = {new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame(),
+            new Frame(), new Frame(), new Frame(), new Frame(), new TenthFrame()};
+    public final DisplayFrame[] displayFrames = {new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame(),
             new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame(), new DisplayFrame()};
 
     public BowlingGame() {
@@ -23,7 +23,7 @@ public class BowlingGame {
 
     public boolean addARoll(Roll roll) {
         int pinsRemaining = frames[currentFrame].pinsRemaining();
-        if (roll.greaterThan(new Roll(pinsRemaining))|| roll.lessThan(Roll.Zero))
+        if (roll.greaterThan(new Roll(pinsRemaining)) || roll.lessThan(Roll.Zero))
             return false;
         if (roll_index >= rolls.length)
             return false;
@@ -36,7 +36,7 @@ public class BowlingGame {
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < ROLL_COUNT; i++) {
             if (rolls[i].isNotTBR())
-                result.add(rolls[i].toInteger()) ;
+                result.add(rolls[i].toInteger());
         }
         return result;
     }
@@ -51,25 +51,24 @@ public class BowlingGame {
             if (incrementRoll != 0) {
                 previousFrameScore = frame.getTotalScore();
                 start += incrementRoll;
-                currentFrame = frameIndex+1;
+                currentFrame = frameIndex + 1;
                 if (currentFrame > frames.length - 1)
                     currentFrame = frames.length - 1;
-            }
-            else {
+            } else {
                 break;
             }
         }
 
     }
-    public  DisplayFrame [] convertToDisplay() {
+
+    public DisplayFrame[] convertToDisplay() {
         for (int frameIndex = 0; frameIndex < frames.length; frameIndex++) {
             displayFrames[frameIndex] = frames[frameIndex].convertToDisplay();
         }
         return displayFrames;
     }
 
-    public InputControl getInputControl()
-    {
+    public InputControl getInputControl() {
         InputControl ic = new InputControl();
         ic.frameNumber = currentFrame + 1;
         Frame cf = frames[currentFrame];
@@ -77,12 +76,13 @@ public class BowlingGame {
         ic.pinsRemaining = cf.pinsRemaining();
         return ic;
     }
+
     public boolean isComplete() {
         return frames[frames.length - 1].isGameComplete();
     }
-    public boolean isNextFrame(){
-        if (previousFrame!=currentFrame)
-        {
+
+    public boolean isNextFrame() {
+        if (previousFrame != currentFrame) {
             previousFrame = currentFrame;
             return true;
         }

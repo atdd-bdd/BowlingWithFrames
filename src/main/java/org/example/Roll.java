@@ -5,30 +5,34 @@ public class Roll {
     public static final Roll TBR = new Roll(TBR_VALUE);
     public static final Roll Zero = new Roll(0);
 
-    public static final Roll Strike = new Roll (10);
+    public static final Roll Strike = new Roll(Frame.PINS_IN_FRAME);
     private final int value;
-    public Roll(String string){
+
+    public Roll(String string) {
         value = Integer.parseInt(string);
-        if (value < TBR_VALUE || value > 10)
+        if (value < TBR_VALUE || value > Frame.PINS_IN_FRAME)
             throw new NumberFormatException("Roll is not valid " + string);
     }
-    public Roll(int  in){
+
+    public Roll(int in) {
         value = in;
-        if (value < TBR_VALUE || value > 10)
+        if (value < TBR_VALUE || value > Frame.PINS_IN_FRAME)
             throw new NumberFormatException("Roll is not valid " + in);
     }
-    public boolean isTBR(){
+
+    public boolean isTBR() {
         return value == TBR_VALUE;
     }
 
-    public boolean isNotTBR(){
+    public boolean isNotTBR() {
         return value != TBR_VALUE;
     }
-    public String toString(){
-        return ""+ value;
+
+    public String toString() {
+        return "" + value;
     }
 
-    public boolean equals(Object obj){
+    public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass())
             return false;
@@ -37,16 +41,17 @@ public class Roll {
     }
 
     public boolean isStrike() {
-        return value == 10;
+        return value == Frame.PINS_IN_FRAME;
     }
 
-    public boolean greaterThan(Roll other){
+    public boolean greaterThan(Roll other) {
         return (this.value > other.value);
     }
 
-    public boolean greaterThanOrEqual(Roll other){
+    public boolean greaterThanOrEqual(Roll other) {
         return (this.value >= other.value);
     }
+
     public boolean lessThan(Roll other) {
         return this.value < other.value;
     }
@@ -55,10 +60,11 @@ public class Roll {
         return this.value <= other.value;
     }
 
-    public boolean equal(Roll other){
+    public boolean equal(Roll other) {
         return this.value == other.value;
     }
-    public Integer toInteger(){
+
+    public Integer toInteger() {
         return value;
     }
 

@@ -13,9 +13,9 @@ public class ConsoleIO {
 
     Roll getInput(InputControl ic) {
         String statusLine = "Frame " + ic.frameNumber + " Roll " + ic.rollNumber +
-            " Pins remaining " + ic.pinsRemaining;
+                " Pins remaining " + ic.pinsRemaining;
 
-        String prompt =  " Roll? ";
+        String prompt = " Roll? ";
         java.io.Console console = System.console();
         if (console == null) {
             System.err.println("NO CONSOLE");
@@ -36,7 +36,7 @@ public class ConsoleIO {
     private Roll checkInput(InputControl ic, String input) {
         try {
             Roll result = new Roll(input);
-            if (result.greaterThanOrEqual(Roll.Zero)& result.lessThanOrEqual(new Roll(ic.pinsRemaining)))
+            if (result.greaterThanOrEqual(Roll.Zero) & result.lessThanOrEqual(new Roll(ic.pinsRemaining)))
                 return result;
             return Roll.TBR;
         } catch (NumberFormatException e) {
@@ -51,8 +51,8 @@ public class ConsoleIO {
         input = input.toUpperCase();
         if (input.equals("-"))
             return Roll.Zero;
-        if (ic.rollNumber == 1){
-              if (input.equals("X"))
+        if (ic.rollNumber == 1) {
+            if (input.equals("X"))
                 return Roll.Strike;
             return Roll.TBR;
         }

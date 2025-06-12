@@ -30,10 +30,10 @@ public class Frame {
 
     private void scoreFrame() {
         if (isStrike() || isSpare())
-             frameScore = Score.addRolls(roll1, roll2, roll3);
-         else
+            frameScore = Score.addRolls(roll1, roll2, roll3);
+        else
             frameScore = Score.addRolls(roll1, roll2);
-         totalScore = Score.addScores(previousFrameScore ,frameScore);
+        totalScore = Score.addScores(previousFrameScore, frameScore);
     }
 
     private int incrementRollIndexBy() {
@@ -57,30 +57,30 @@ public class Frame {
                 displayFrame.mark2 = "/";
             else
                 displayFrame.mark2 = markForRoll(roll2);
-            }
+        }
         displayFrame.displayScore = totalScore.toString();
         return displayFrame;
 
     }
 
-    boolean isGameComplete(){
+    boolean isGameComplete() {
         return false;
     }
 
-    int pinsRemaining(){
+    int pinsRemaining() {
         if (roll1.isTBR())
-            return PINS_IN_FRAME ;
+            return PINS_IN_FRAME;
         return PINS_IN_FRAME - roll1.toInteger();
     }
 
-    int currentRoll(){
+    int currentRoll() {
         if (roll1.isTBR())
             return 1;
         return 2;
     }
 
     static String markForRoll(Roll roll) {
-        if (roll.equal(Roll.Zero) )
+        if (roll.equal(Roll.Zero))
             return "-";
         if (roll.isNotTBR())
             return String.valueOf(roll);
