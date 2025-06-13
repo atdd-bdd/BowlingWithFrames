@@ -70,8 +70,10 @@ public class Frame {
     int pinsRemaining() {
         if (roll1.isTBR())
             return PINS_IN_FRAME;
-        return PINS_IN_FRAME - roll1.toInteger();
+        return roll1.differenceInPins(PINS_IN_FRAME);
     }
+
+
 
     int currentRoll() {
         if (roll1.isTBR())
@@ -88,8 +90,7 @@ public class Frame {
     }
 
     boolean isSpare() {
-        return roll1.toInteger() +
-                roll2.toInteger() == PINS_IN_FRAME;
+        return Score.addRolls(roll1, roll2).equals(new Score(PINS_IN_FRAME));
     }
 
     boolean isStrike() {

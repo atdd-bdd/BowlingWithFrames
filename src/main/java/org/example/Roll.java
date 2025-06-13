@@ -68,4 +68,7 @@ public class Roll {
         return value;
     }
 
+    public int differenceInPins(int pins) {
+        return pins - value;
+    }
 }
