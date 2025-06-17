@@ -7,10 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7924b5ac-85a4-44aa-ba11-5d12081fcf1d" name="Changes" comment="Reformated and cleaned up.">
+    <list default="true" id="7924b5ac-85a4-44aa-ba11-5d12081fcf1d" name="Changes" comment="Little more cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Roll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Roll.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1749733692305</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Little more cleanup">
+      <created>1749827648216</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1749827648216</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -259,7 +264,8 @@
     <MESSAGE value="Refactored input checking to simplify it." />
     <MESSAGE value="Updated documentation" />
     <MESSAGE value="Reformated and cleaned up." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reformated and cleaned up." />
+    <MESSAGE value="Little more cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Little more cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
