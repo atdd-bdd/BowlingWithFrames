@@ -43,8 +43,10 @@ public class BowlingGame {
                 previousFrameScore = frame.getTotalScore();
                 start += incrementRoll;
                 currentFrame = frameIndex + 1;
-                if (currentFrame > frames.length - 1)
+                if (currentFrame > frames.length - 1) {
+                    System.out.println("Not going to next frame");
                     currentFrame = frames.length - 1;
+                }
             } else {
                 break;
             }

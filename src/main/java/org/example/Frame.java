@@ -36,7 +36,7 @@ public class Frame {
         totalScore = Score.addScores(previousFrameScore, frameScore);
     }
 
-    private int incrementRollIndexBy() {
+    int incrementRollIndexBy() {
         if (roll1.isTBR())
             return 0;
         if (isStrike())

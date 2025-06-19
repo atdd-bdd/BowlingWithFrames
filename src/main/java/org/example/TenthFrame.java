@@ -24,7 +24,9 @@ public class TenthFrame extends Frame {
         return displayFrame;
 
     }
-
+    int incrementRollIndexBy() {
+        return 0;
+    }
     boolean isGameComplete() {
         if (roll2.isTBR() )
             return false;
